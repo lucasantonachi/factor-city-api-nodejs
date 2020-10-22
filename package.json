@@ -2,7 +2,7 @@
   "name": "factor-city-api-nodejs",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "",
   "scripts": {
     "start": "nodemon src/server.js"
   },
