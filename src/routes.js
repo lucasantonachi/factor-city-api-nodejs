@@ -1,8 +1,10 @@
 const express = require("express");
-const routes = express.Router();
 
-routes.get("/", function(req, res) {
-  return res.send("Minha primeira rota!");
-});
+const routes = express.Router();
+const UserController = require("./app/controller/UserController");
+
+routes.get("/user", UserController.findUser);
+
+routes.post("/user", UserController.createUser);
 
 module.exports = routes;
