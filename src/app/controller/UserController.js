@@ -13,6 +13,16 @@ class UserController {
 
         return res.json(data);
     }
+
+    async existById(id) {
+
+        try{
+            await User.findById(id);
+            return true;
+        }catch(e){
+            return false;
+        }
+    }
 }
 
 module.exports = new UserController();
