@@ -1,0 +1,256 @@
+{
+	"info": {
+		"_postman_id": "5b0f738d-8e74-4030-bf33-90f93df0ced1",
+		"name": "factorCity - API Rest Full (nodejs)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "findAllUser",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3001/user",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findAllTrip",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3001/trip",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"trip"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findTripById",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3001/trip/5f9d0b98c41d113940d6cb3b",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"trip",
+						"5f9d0b98c41d113940d6cb3b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findAllGasStation",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/gas-station",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"gas-station"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "saveUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"lucascfamil@hotmail.com\",\r\n    \"password\": \"coxinha1234\",\r\n    \"name\": \"Antonachi\",\r\n    \"age\": 19,\r\n    \"active\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3001/user",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "saveTrip",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"latitudeOrigin\": \"145665\",\r\n    \"longitudeOrigin\": \"34564\",\r\n    \"latitudeDestiny\": \"13123\",\r\n    \"longitudeDestiny\": \"21313\",\r\n    \"tripDistance\": 30,\r\n    \"tripDuration\": \"10\",\r\n    \"idUser\": \"5f9cff2750477e37d8da881c\",\r\n    \"idGasStation\": \"adasdasd\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3001/trip",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"trip"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "saveGasStation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Posto do Brasil\",\r\n    \"latitude\": \"1423434\",\r\n    \"longitude\": \"1423434\",\r\n    \"evaluation\": 12,\r\n    \"gasolinePrice\": 12,\r\n    \"ethanolPrice\": 12,\r\n    \"dieselPrice\": 12,\r\n    \"gasPrice\": 12\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/gas-station",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"gas-station"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateTrip",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"latitudeOrigin\": \"145665\",\r\n    \"longitudeOrigin\": \"34564\",\r\n    \"latitudeDestiny\": \"13123\",\r\n    \"longitudeDestiny\": \"21313\",\r\n    \"tripDistance\": 30,\r\n    \"tripDuration\": 1,\r\n    \"idUser\": \"5f9cff2750477e37d8da881c\",\r\n    \"idGasStation\": \"5f9d03577a6aea24c04b5324\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3001/trip?id=5f9d0b98c41d113940d6cb3b",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"trip"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "5f9d0b98c41d113940d6cb3b"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteTrip",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3001/trip?id=5f9d156c00174e286c4979aa",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"trip"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "5f9d156c00174e286c4979aa"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
